@@ -9,6 +9,7 @@ const productService = {
   },
   async getAllProducts(): Promise<IProduct[]> {
     const result = await productModel.getAllProducts();
+    
     return result;
   },
 };

@@ -1,4 +1,4 @@
-import { ResultSetHeader } from 'mysql2';
+import { ResultSetHeader } from 'mysql2/promise';
 import IProduct from '../interfaces/products.interface';
 import connection from './connection';
 
@@ -11,8 +11,7 @@ const productModel = {
     
     const created = {
       id: row.insertId,
-      name: product.name,
-      amount: product.amount,
+      ...product,
     };
   
     return created;
@@ -20,6 +19,7 @@ const productModel = {
   async getAllProducts(): Promise<IProduct[]> {
     const query = 'SELECT * FROM Trybesmith.products;';
     const [result] = await connection.execute(query);
+
     return result as IProduct[];
   },
 

@@ -10,6 +10,7 @@ const productController = {
   },
   async getAllProducts(_req: Request, res: Response) {
     const result = await productService.getAllProducts();
+    
     return res.status(200).json(result);
   },
 };
