@@ -16,7 +16,12 @@ const productModel = {
     };
   
     return created;
-  }, 
+  },
+  async getAllProducts(): Promise<IProduct[]> {
+    const query = 'SELECT * FROM Trybesmith.products;';
+    const [result] = await connection.execute(query);
+    return result as IProduct[];
+  },
 
 };
 
