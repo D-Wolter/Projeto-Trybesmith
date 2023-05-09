@@ -1,6 +1,6 @@
 # Projeto TrybeSmith API
 
-Projeto realizado durante módulo de Back-end do curso de desenvolvimento web da Trybe.
+Projeto realizado durante módulo de Back-end do curso de desenvolvimento web da Trybe, Uma API RESTful para uma loja de itens medievais na qual é possível criar, visualizar, deletar e atualizar produtos, pedidos e usuários, desenvolvido com MySQL e arquitetura MSC (model-service-controller).
 
 <details>
   <summary><strong>O que foi feito</strong></summary></br>
