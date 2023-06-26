@@ -3,7 +3,6 @@ WORKDIR /app
 COPY package*.json ./
 RUN npm install
 COPY src src
-COPY tests tests
 COPY .eslintignore .
 COPY .eslintrc.json .
 COPY Trybesmith.sql .
